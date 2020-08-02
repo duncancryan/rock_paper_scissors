@@ -1,4 +1,5 @@
 from app.models.player import Player
+import random
 
 class Game():
     def __init__(self, player_1, player_2):
@@ -17,4 +18,9 @@ class Game():
         else:
             return self.player_2
         
+    def generate_ai(self):
+        choices = ["rock", "paper", "scissors"]
+        ai_choice = choices[random.randint(0, 2)]
+        ai = Player("Computer", ai_choice)
+        return ai
     # logic needed which accesses player choice and determines winner, can I write game logic elsewhere???
