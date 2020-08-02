@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1><b>Result:</b></h1>
+        <section>
+            <h2>Result:</h2> -->
+            {% if game.determine_winner() == None %}
+            <p>It's a draw!</p>
+            {% else %}
+            <p>{{ game.determine_winner().name }} wins!</p>
+            {% endif %}
+        </section>
+
+{% endblock %}

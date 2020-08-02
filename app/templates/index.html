@@ -23,12 +23,9 @@
             <option value="scissors">Scissors</option>
         </select>
         </div>
+        <div>
+            <input type="submit" value="Play">
+        </div>
     </form>
-    <h2>Result:</h2>
-    {% if result == None %}
-    <p>It's a draw!</p>
-    {% else %}
-    <p>{{ result.name }} wins!</p>
-    {% endif %}
-
 {% endblock %}
+
