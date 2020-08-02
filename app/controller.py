@@ -15,3 +15,6 @@ def play_game():
     result = new_game.determine_winner()
     return render_template('result.html', result=result)
 
+@app.route('/welcome')
+def welcome_page():
+    return render_template('welcome.html')
