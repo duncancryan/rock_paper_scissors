@@ -3,24 +3,32 @@
 {% block content %}
 <h1>Rock, Paper, Scissors!</h1>
     <form action="/play-game" method="POST"></form>
-    <div>
-    <label for="player-1">Player One Name:</label>
-    <input type="text" name="player-1" id="player-1">
-    <label for="player-1-choice">Choice?</label>
-    <select name="player-1-choice" id="player-1-choice">
-        <option value="rock">Rock</option>
-        <option value="paper">Paper</option>
-        <option value="scissors">Scissors</option>
-    </select>
-    </div>
-    <div>
-    <label for="player-2">Player Two Name:</label>
-    <input type="text" name="player-2" id="player-2">
-    <label for="player-2-choice">Choice?</label>
-    <select name="player-2-choice" id="player-2-choice">
-        <option value="rock">Rock</option>
-        <option value="paper">Paper</option>
-        <option value="scissors">Scissors</option>
-    </select>
-    </div>
+        <div>
+        <label for="player-1">Player One Name:</label>
+        <input type="text" name="player-1" id="player-1">
+        <label for="player-1-choice">Choice?</label>
+        <select name="player-1-choice" id="player-1-choice">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+        </select>
+        </div>
+        <div>
+        <label for="player-2">Player Two Name:</label>
+        <input type="text" name="player-2" id="player-2">
+        <label for="player-2-choice">Choice?</label>
+        <select name="player-2-choice" id="player-2-choice">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+        </select>
+        </div>
+    </form>
+    <h2>Result:</h2>
+    {% if result == None %}
+    <p>It's a draw!</p>
+    {% else %}
+    <p>{{ result.name }} wins!</p>
+    {% endif %}
+
 {% endblock %}
