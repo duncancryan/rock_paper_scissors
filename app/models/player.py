@@ -1,3 +1,4 @@
 class Player():
-    def __init__(self):
-        pass
+    def __init__(self, name, choice):
+        self.name = name
+        self.choice = choice
