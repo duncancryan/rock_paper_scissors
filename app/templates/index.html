@@ -2,7 +2,7 @@
     
 {% block content %}
 <h1>Rock, Paper, Scissors!</h1>
-    <form action="/play-game" method="POST"></form>
+    <form action="/play-game" method="POST">
         <div>
         <label for="player-1">Player One Name:</label>
         <input type="text" name="player-1" id="player-1">
@@ -22,10 +22,8 @@
             <option value="paper">Paper</option>
             <option value="scissors">Scissors</option>
         </select>
-        </div>
-        <div>
-            <input type="submit" value="Play">
-        </div>
+         <input type="submit" value="Play">
+        </div>    
     </form>
 {% endblock %}
 

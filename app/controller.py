@@ -5,7 +5,7 @@ from app.models.player import *
 
 @app.route('/')
 def index():
-    return render_template('index.html', title='Home')
+    return render_template('index.html')
 
 @app.route('/play-game', methods=['POST'])
 def play_game():
@@ -14,4 +14,5 @@ def play_game():
     player_2 = Player(request.form['player-2'], request.form['player-2-choice'])
     new_game = Game(player_1, player_2)
     result = new_game.determine_winner()
-    return render_template('index.html', title='Home')
+    return render_template('result.html', result=result)
+

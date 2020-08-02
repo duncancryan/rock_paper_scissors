@@ -3,11 +3,10 @@
 {% block content %}
     <h1><b>Result:</b></h1>
         <section>
-            <h2>Result:</h2> -->
-            {% if game.determine_winner() == None %}
+            {% if result == None %}
             <p>It's a draw!</p>
             {% else %}
-            <p>{{ game.determine_winner().name }} wins!</p>
+            <p>{{ result.name }} wins!</p>
             {% endif %}
         </section>
 
