@@ -8,3 +8,5 @@ def index():
     return render_template('index.html', title='Home')
 
 @app.route('/play-game', methods=['POST'])
+def play_game():
+    pass
