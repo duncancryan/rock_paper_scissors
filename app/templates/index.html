@@ -2,7 +2,7 @@
     
 {% block content %}
     <form action="/play-game" method="POST">
-        <div>
+        <section>
         <label for="player-1">Player One Name:</label>
         <input type="text" name="player-1" id="player-1">
         <label for="player-1-choice">Choice?</label>
@@ -11,8 +11,8 @@
             <option value="paper">Paper</option>
             <option value="scissors">Scissors</option>
         </select>
-        </div>
-        <div>
+        </section>
+        <section>
         <label for="player-2">Player Two Name:</label>
         <input type="text" name="player-2" id="player-2">
         <label for="player-2-choice">Choice?</label>
@@ -22,7 +22,7 @@
             <option value="scissors">Scissors</option>
         </select>
          <input type="submit" value="Play">
-        </div>    
+        </section>    
     </form>
 {% endblock %}
 
