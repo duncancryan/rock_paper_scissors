@@ -3,10 +3,20 @@
 {% block content %}
 <h1>Rock, Paper, Scissors!</h1>
     <form action="/play-game" method="POST"></form>
+    <div>
     <label for="player-1">Player One</label>
     <select name="player-1" id="player-1">
         <option value="rock">Rock</option>
         <option value="paper">Paper</option>
         <option value="scissors">Scissors</option>
     </select>
+    </div>
+    <div>
+    <label for="player-2">Player Two</label>
+    <select name="player-2" id="player-2">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
+    </div>
 {% endblock %}
