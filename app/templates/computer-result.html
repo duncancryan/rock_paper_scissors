@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2><b>Result:</b></h2>
+<section>
+    {% if result == None %}
+    <p>It's a draw!</p>
+    {% else %}
+    <p>{{ result.name }} wins by choosing {{ result.choice }}</p>
+    {% endif %}
+</section>
+
+{% endblock %}

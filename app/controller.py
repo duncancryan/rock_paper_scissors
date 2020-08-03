@@ -18,3 +18,15 @@ def play_game():
 @app.route('/welcome')
 def welcome_page():
     return render_template('welcome.html')
+
+@app.route('/computer')
+def computer_opponent():
+    return render_template('computer.html')
+
+@app.route('/play-computer', methods=['POST'])
+def play_computer():
+    player_1 = Player(request.form['player'], request.form['player-choice'])
+    computer = generate_ai()
+    new_game = Game(player_1, computer)
+    result = new_game.determine_winner()
+    return render_template('computer-result.html', result=result)
