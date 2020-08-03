@@ -3,7 +3,7 @@ body {
     padding: 10px;
     color: rgb(37, 37, 37);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: cornflowerblue;
+    background-color: rgb(53, 91, 161);
 }
 
 
@@ -12,4 +12,5 @@ nav ul  {
   margin: 0;
   padding: 0;
 }
+
 
